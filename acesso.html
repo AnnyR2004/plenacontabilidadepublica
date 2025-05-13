@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+	<meta charset="utf-8">
+	<title> LOGIN | PLENA CONTABILIDADE PUBLICA &copy; USUARIOS - Sistemas de Gestão </title>
+    <meta name="description" content="LOGIN | Plena Contabilidade Publica &copy; Usuarios - Sistemas de Gestão">
+	<meta name="author" content="&copy; Grupo Medis">     
+	<meta name="keywords" content="sistemas, softwares">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <script src="scripts.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" media="all" href="style.css">
+	<link rel="shortcut icon" href="img/pcp.jpg" />
+	
+</head>
+<body>
+	<!-- Container Principal -->
+	<div id="container">
+		<div class="slogan">
+			
+		</div>
+		<div class="Logo">
+            <ul>
+                <a href="index.html" target="blank" alt="Plena Contabilidade Publica &copy; Usuarios - Sistemas de Gestão" title="Plena Contabilidade Publica &copy; Usuarios - Sistemas de Gestão">
+				<img src="img/pcp.jpg" alt="LOGIN | Plena Contabilidade Publica &copy; Usuarios Sistemas de Gestão" title="LOGIN | Plena Contabilidade Publica &copy; Usuarios - Sistemas de Gestão" /></a>
+            </ul>
+		</div>
+		
+		<div class="blkDireito">
+			<div class="blkLogin">
+				<div class="blkHead">
+					<div class="blkTextos">
+						<h1> Restrito </h1>
+                    </div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="blkForm">
+                    <form method="post" action="restricted.html" id="blkLogin" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value= />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="" />
+</div>
+                    
+                        <input name="username" type="text" id="username" title="Insira seu usuário." placeholder="Usuário" alt="Insira seu usuário." required="required">
+                        <input name="password" type="password" maxlength="250" id="password" title="Insira sua senha." placeholder="Senha" alt="Insira sua senha." required="required">
+
+                        <div class="legenda" id="blkFalhaEmail">
+                            <b></b>
+                        </div>
+                        <input type="submit" name="Button1" class="botao-animado" value="Entrar" id="Button1" title="Clique aqui para entrar!" />
+                        <div style="clear: both;"></div>
+                    </form>
+                        <input type="button" class="botao-animado" id="btVoltar" value="Voltar" alt="Voltar" title="Voltar" />
+                        <div style="clear: both;"></div>
+                    </form>
+    </script>
+				</div>				
+			</div>
+        </div>
+    </div>
+</body>
+    </div>
+	<!-- Container Principal / END -->
+	
+	<!-- Faixas coloridas -->
+	<div id="blkFaixasColoridas">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+		<div class="d"></div>
+	</div>
+	<!-- Faixas coloridas / END -->
+    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript">
+        $(".nmUsuario").attr("placeholder", "Usuário");
+        $(".nmUsuario").attr("alt", "Insira seu usuário");
+        $(".nmUsuario").attr("required", "required");
+
+        $(".dsSenha").attr("placeholder", "Senha");
+        $(".dsSenha").attr("alt", "Insira sua senha.");
+        $(".dsSenha").attr("required", "required");
+    </script>
+</body>
+</html>
+

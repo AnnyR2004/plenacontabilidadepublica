@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📁CONTRATOS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- style -->
+	<link rel="stylesheet" type="text/css" media="all" href="style.css">
+	<link rel="shortcut icon" href="img/pcp.jpg" />
+	<!-- style end -->
+    <ul id="pdfList"></ul>
+
+
+<script>
+  fetch('contratos.json')
+    .then(res => res.json())
+    .then(data => {
+      const list = document.getElementById('pdfList');
+      data.forEach(item => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = item.path;
+        a.textContent = item.name;
+        a.target = '_blank';
+
+        const btn = document.createElement('button');
+        btn.textContent = 'Excluir';
+        btn.style.marginLeft = '10px';
+        btn.onclick = () => {
+          if (confirm('Tem certeza que deseja excluir este arquivo?')) {
+            fetch('excluir_arquivo.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams({
+                path: item.path,
+                tipo: 'contratos'
+              })
+            }).then(res => res.text())
+              .then(response => {
+                if (response === 'ok') {
+                  li.remove();
+                } else {
+                  alert('Erro ao excluir o arquivo.');
+                }
+              });
+          }
+        };
+
+        li.appendChild(a);
+        li.appendChild(btn);
+        list.appendChild(li);
+      });
+    });
+</script>
+
+    

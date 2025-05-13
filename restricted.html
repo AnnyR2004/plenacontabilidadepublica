@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ARQUIVOS - Plena Contabilidade Pública</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Gerenciador de Arquivos</h1>
+
+  <form id="uploadForm" action="processar_arquivo.php" method="POST" enctype="multipart/form-data">
+    <h2>📥 Upload de Arquivo PDF</h2>
+    <input type="hidden" name="destino" value="publicacoes">
+    <input type="file" name="file" accept="application/pdf" required>
+    <button type="submit">Enviar</button>
+  </form>
+  
+  <form id="contractForm" action="processar_arquivo.php" method="POST" enctype="multipart/form-data">
+    <h2>📁 Contratos</h2>
+    <input type="hidden" name="destino" value="contratos">
+    <input type="file" name="file" accept="application/pdf" required>
+    <button type="submit">Enviar</button>
+  </form>
+  
+  <h2>📚 PDFs Carregados</h2>
+  <ul id="fileList"></ul>
+  <script>
+    const saveToLocal = () => {}
+  const links = Array.from(fileList.children).map(li => ({
+    name: li.querySelector('a').textContent,
+    href: li.querySelector('a').href
+}));
+const addListItem = (name, href) => {}
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  const del = document.createElement('button');
+
+  a.href = href;
+  a.target = '_blank';
+  a.textContent = name;
+
+  del.textContent = 'Excluir';
+  del.onclick = () => {
+    li.remove();
+    saveToLocal();
+  };
+    
+  </script>
+
+</body>
+</html>
